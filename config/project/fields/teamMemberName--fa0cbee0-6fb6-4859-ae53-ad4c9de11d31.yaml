@@ -1,0 +1,19 @@
+columnSuffix: yhkcxzeo
+contentColumnType: text
+fieldGroup: 8a6541e9-9801-412b-8e87-19805dc61004 # Team Members
+handle: teamMemberName
+instructions: 'Enter the first and last name of the team member.'
+name: 'Team Member Name'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

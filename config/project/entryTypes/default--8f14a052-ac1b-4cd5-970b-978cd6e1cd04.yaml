@@ -1,0 +1,125 @@
+fieldLayouts:
+  bbc07333-18b8-4375-836f-42c6a28e450c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 94368001-8237-495d-8b96-b4a03bbe8a81
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            heading: 'Team Member Photo'
+            type: craft\fieldlayoutelements\Heading
+            uid: 140f7aa6-c359-4dc8-a729-85a0f8d9d6d9
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: c9cbd6b0-72be-4cde-9638-cb7e9951226f # Featured Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5c9156c-d86b-4747-811e-022a474efbbe
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            heading: 'Team Member Name & Role'
+            type: craft\fieldlayoutelements\Heading
+            uid: 925a855e-b0a5-4cc1-951b-2c0bc0634128
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: fa0cbee0-6fb6-4859-ae53-ad4c9de11d31 # Team Member Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0db25019-e057-401a-a053-c87f41ef8a79
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 23610f9a-c51a-4c99-aa7d-554a0576413c # Position Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1a8c577f-b65d-4207-a73c-c97e420effb2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            heading: 'Team Member Contact Info'
+            type: craft\fieldlayoutelements\Heading
+            uid: 1ab87007-7db6-48a5-a250-ff8c26e00790
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: a0fe0621-54f5-43e7-a061-f5977bdcb32a # Phone Number
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 952d7646-10c8-4cd2-9aff-1073dad04524
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            elementCondition: null
+            fieldUid: 1cc8d9e1-0389-4edc-8c86-811f10447bdd # Email Address
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 55dad7a7-d91b-41fd-8905-e97470aca751
+            userCondition: null
+            warning: null
+            width: 50
+        name: 'Team Member Details'
+        uid: 2b99ad55-9f88-48e0-afd2-f555c2f6fc2b
+        userCondition: null
+handle: default
+hasTitleField: false
+name: Default
+section: 6671897c-1616-4b40-ad8d-c2fff42f6259 # Team Members
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{teamMemberName}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

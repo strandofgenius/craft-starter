@@ -2,18 +2,103 @@ fieldLayouts:
   f6203211-ad03-49ec-8423-3d215898f508:
     tabs:
       -
-        fields:
-          cdd377e5-a451-46b0-ae80-bc4cee907d3e: # Caption
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 4fab53fc-57ae-4b96-bf29-765eddc38d6b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cdd377e5-a451-46b0-ae80-bc4cee907d3e # Caption
+            instructions: null
+            label: null
             required: false
-            sortOrder: 1
-          db95de40-4dec-44cc-9d17-bba2223c91cf: # Image Alt
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 85dd272a-5422-4629-9ff3-89d2b1a17873
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: db95de40-4dec-44cc-9d17-bba2223c91cf # Image Alt
+            instructions: null
+            label: null
             required: false
-            sortOrder: 2
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7d01149c-497d-40f4-81c7-d5e5380bcb6a
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
-        sortOrder: 1
+        uid: d9947467-fc64-4841-9729-b2dffb318d8d
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 76a47f25-a9c9-46a0-93e8-524a0ac03fd5 # Original Image Transform
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c47f3643-e995-4f1b-b6a4-e91fdf532f66
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Original Transform'
+        uid: 723388e5-51a6-4a45-8aa6-dc73eb55c9a2
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d973628e-c8e3-45ef-9c15-669942debb8a # Square Image Transform
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ee25cb72-fd04-4844-9de9-75ecc13792fb
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Square Transform'
+        uid: a206db6d-676d-4602-98ab-71cb108a22e7
+        userCondition: null
 fs: uploads
 handle: uploads
-hasUrls: true
 name: Uploads
 sortOrder: 1
-url: '@web/uploads'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''
