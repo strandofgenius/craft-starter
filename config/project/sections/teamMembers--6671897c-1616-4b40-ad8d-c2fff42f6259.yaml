@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: teamMembers
+name: 'Team Members'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  f3400d6f-0f33-4cef-9521-f8f6620399ec: # Craft Starter
+    enabledByDefault: true
+    hasUrls: true
+    template: team-members/_entry
+    uriFormat: 'about/{slug}'
+type: channel
