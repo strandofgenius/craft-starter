@@ -1,4 +1,4 @@
-dateModified: 1704762675
+dateModified: 1704764630
 email:
   fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
@@ -25,6 +25,7 @@ meta:
     28d5c036-8cb0-4a14-b553-0167ee34efbe: Image # Image
     031e8547-9981-4367-ad27-178240517ea1: 'Site Introduction' # Site Introduction
     55cd92b3-363e-4573-ad2c-04650483ba64: Gatsby # Gatsby
+    76a47f25-a9c9-46a0-93e8-524a0ac03fd5: 'Original Image Transform' # Original Image Transform
     90dee5cc-23f1-40ac-ae14-3fa71bebc4dc: 'Craft Blog' # Craft Blog
     101a70a1-d200-4629-91e5-3425a0937c0e: Uploads # Uploads
     265d76a5-d5a9-4c82-bee4-2f8450aacd0a: 'Public Schema' # Public Schema
@@ -34,8 +35,10 @@ meta:
     a6ca7d80-fa7f-433b-b6ba-fd9f19791f82: Style # Style
     a6f02aa5-ab37-46e2-bbd4-3b56930577d5: Images # Images
     a121b8e6-70e6-421b-9629-c664d2949934: Quote # Quote
+    a20083a2-fbdf-4122-ab77-401551ba0496: Assets # Assets
     bb6d289b-c3cf-4a8d-9324-b98cbd32753b: Blog # Blog
     cdd377e5-a451-46b0-ae80-bc4cee907d3e: Caption # Caption
+    d973628e-c8e3-45ef-9c15-669942debb8a: 'Square Image Transform' # Square Image Transform
     db2dff45-19b4-479c-8cba-ab88e7e7d2fd: Blog # Blog
     db95de40-4dec-44cc-9d17-bba2223c91cf: 'Image Alt' # Image Alt
     dbd1be32-5e0d-4483-92a5-cc47aba67dcc: About # About
@@ -55,6 +58,56 @@ plugins:
     settings:
       buildWebhookUrl: ''
       previewWebhookUrl: $GATSBY_PREVIEW_TARGET
+  image-optimize:
+    edition: standard
+    enabled: true
+    licenseKey: FO13SKGGH4I88SPS5TZ91RN1
+    schemaVersion: 1.0.0
+    settings:
+      allowUpScaledImageVariants: false
+      assetVolumeSubFolders: true
+      autoSharpenScaledImages: true
+      capSilhouetteSvgSize: false
+      createColorPalette: false
+      createPlaceholderSilhouettes: false
+      imageTransformTypeSettings:
+        __assoc__:
+          -
+            - nystudio107\imageoptimizeimgix\imagetransforms\ImgixImageTransform
+            -
+              __assoc__:
+                -
+                  - domain
+                  - ''
+                -
+                  - apiKey
+                  - ''
+                -
+                  - securityToken
+                  - ''
+                -
+                  - unsharpMask
+                  - '20'
+          -
+            - nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - ''
+          -
+            - nystudio107\imageoptimizethumbor\imagetransforms\ThumborImageTransform
+            -
+              __assoc__:
+                -
+                  - baseUrl
+                  - ''
+                -
+                  - securityKey
+                  - ''
+      lowerQualityRetinaImageVariants: true
+      sharpenScaledImagePercentage: 50
+      transformClass: nystudio107\imageoptimize\imagetransforms\CraftImageTransform
   redactor:
     edition: standard
     enabled: true
