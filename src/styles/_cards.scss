@@ -1,0 +1,37 @@
+.card {
+  @include e(img){
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+    img {
+      height: 100%;
+      left:0;
+      object-fit: cover;
+      position: absolute;
+      top:0;
+      width: 100%;
+    }
+  }
+  @include e(content) {
+    background-color: rgba(154,162,174,.5);
+    border-bottom: 10px solid #9aa2ae;
+    .name {
+      color: #602e30;
+    }
+    .position {
+      color: #231f20;
+    }
+    a {
+      color: #296c9f;
+      text-decoration: underline;
+      &:hover {
+        color: darken(#296c9f, 30);
+      }
+      &:focus {
+        color: darken(#296c9f, 30);
+      }
+    }
+  }
+}

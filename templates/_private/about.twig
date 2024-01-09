@@ -1,7 +1,63 @@
 {% extends "_private/layout" %}
 
 {% block content %}
-  <h1 class="text-4xl text-black font-display my-4">{{ entry.title }}</h1>
+    <h1 class="text-4xl text-black font-display my-4">{{ entry.title }}</h1>
 
-  {% include "_private/matrix" with {blocks: entry.bodyContent.all()} %}
+    {% include "_private/matrix" with {blocks: entry.bodyContent.all()} %}
+
+    {% set team = craft.entries()
+        .section('teamMembers')
+        .orderby('title asc')
+        .all() %}
+
+    <div id="team-members" class="flex flex-wrap -ml-3">
+
+        {% for teamMember in team|filter(teamMember => teamMember is not null) %}
+            {% set image = teamMember.featuredImage|length ? teamMember.featuredImage.one() : null %}
+            {% set phoneNumber = teamMember.phoneNumber|replace({'(':'',')':'',' ':'.','-':'.'}) %}
+
+            <div class="card card--team w-full md:w-1/2 pl-3 mt-3">
+                {% if image %}
+                    {# Get image original image transform #}
+                    {% set optimizedImage = image.squareImageTransform %}
+                    {% set altText = image.imageAlt ?? image.title %}
+
+                    {# set x an y focal point for object position style #}
+                    {% set focalPointX = image.focalPoint.x * 100 ~ '%' | default("center") %}
+                    {% set focalPointY = image.focalPoint.y * 100 ~ '%' | default("center") %}
+
+                    <div class="card__img">
+                        <img src="{{ optimizedImage.src() }}"
+                             srcset="{{ optimizedImage.srcset() }}"
+                             sizes="100vw"
+                             width="{{ image.width }}"
+                             height="{{ image.height }}"
+                             alt="{{ altText }}" style="object-position: {{ focalPointX }} {{ focalPointY }}">
+                    </div>
+
+                {% endif %}
+
+                <div class="card__content p-3">
+                    <h2 class="name font-display font-bold uppercase">{{ teamMember.title }}</h2>
+
+                    {% if teamMember.positionTitle %}
+                        <div class="position text-sm">{{ teamMember.positionTitle }}</div>
+                    {% endif %}
+
+                    {% if phoneNumber %}
+                        <div class="text-sm"><a href="{{ "tel:+1#{phoneNumber}"|replace('.', '') }}" aria-label="{{ "Call #{teamMember.title} at #{phoneNumber}" }}" title="Click to call {{ teamMember.title }}">{{ phoneNumber }}</a></div>
+                    {% endif %}
+
+                    {% if teamMember.emailAddress %}
+                        <div class="text-sm"><a href="{{ "mailto:#{teamMember.emailAddress}" }}" aria-label="{{ "Email #{teamMember.title}" }}" title="Click to email {{ teamMember.title }}">{{ teamMember.emailAddress }}</a></div>
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
 {% endblock %}

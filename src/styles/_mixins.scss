@@ -1,0 +1,13 @@
+// append sub element to parent selector
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+// append modifier to any element selector
+@mixin m($element) {
+  &--#{$element} {
+    @content;
+  }
+}

@@ -26,6 +26,14 @@
 
     <link href="//fonts.googleapis.com/css?family=Work+Sans:600|Quattrocento+Sans:400,400i,700" rel="stylesheet" type="text/css">
 
+    {# -- Inline CSS #}
+    <style>
+      {# -- Any CSS that should be included before </head> -- #}
+      {% block headCss %}
+      {% include '_private/_inline-css/site-fonts.css' %}
+      {% endblock headCss %}
+    </style>
+
     {#
       The Asset Rev plugin provides this `rev()` Twig function for cache-busting
       css and js files. It will return nothing when the webpack dev server is

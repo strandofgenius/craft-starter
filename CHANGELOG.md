@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.3 - 2024-01-08
+### Added
+- Query team member entries to About single
+- Add Google fonts locally
+- Add SASS mixins for elements and modifiers
+### Changed
+- Updated display and body fonts
+
 ## 1.0.2 - 2024-01-08
 ### Added
 - Add Team Member channel entry type
